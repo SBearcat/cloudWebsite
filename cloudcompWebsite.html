@@ -12,16 +12,15 @@
 <div class="container"> 
   <!-- Header -->
   <header class="header">
-    <h4 class="logo">"Insert Website Name Here"</h4>
+    <h4 class="logo">SHARED ART</h4>
   </header>
   <!-- Hero Section -->
   <section class="intro">
     <div class="column">
-      <h3>JOHN DOE</h3>
       <img src="images/profile.png" alt="" class="profile"> </div>
     <div class="column">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+      <p>We are a website created for the purpose of sharing one's art. You may view all documents as long as they have not been taken down from the contributer's portfolio.  </p>
+      <p>Consider contributing to keep the platform growing!</p>
     </div>
   </section>
   <!-- Stats Gallery Section -->
@@ -71,11 +70,16 @@
   </div>
   <!-- Footer Section -->
   <footer id="contact">
-    <p class="hero_header">GET IN TOUCH WITH ME</p>
-    <div class="button">EMAIL ME </div>
+    <p class="hero_header"><strong>UPLOAD TO PORTFOLIO</strong></p>
+    <div class="button"> 
+	  <form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		  <input type="submit" value="UPLOAD">
+			   </form>
+	  </div>
   </footer>
   <!-- Copyrights Section -->
-  <div class="copyright">&copy;2021 - <strong>GRID</strong></div>
+  <div class="copyright">&copy;ECU</div>
 </div>
 <!-- Main Container Ends -->
 </body>
