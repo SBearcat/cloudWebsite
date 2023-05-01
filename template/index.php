@@ -23,7 +23,7 @@ session_start();
   <!-- Header -->
   <header class="header">
     <h4 class="logo">SHARED ART</h4>
-    <button class="logout-button" onclick="logout()">Logout</button>
+    <a href="logout.php">Logout</a>
   </header>
   <!-- Hero Section -->
   <section class="intro">
