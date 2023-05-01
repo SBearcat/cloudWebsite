@@ -18,7 +18,7 @@
   <!-- Hero Section -->
   <section class="intro">
     <div class="column">
-      <img src="{{ url_for('static', filename='images/profile.png') }}" alt="" class="profile">
+      <img src="shared-art.jpg" alt="" class="profile">
     </div>
     <div class="column">
       <p>We are a website created for the purpose of sharing one's art. You may view all documents as long as they have not been taken down from the contributer's portfolio.  </p>
@@ -27,49 +27,38 @@
   </section>
   <!-- Stats Gallery Section -->
   <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="thumbnail"> <a href="#"><img src="art.jpg" alt="" width="2000" class="cards"/></a>
+      <h4>Art Peices</h4>
+      <p class="text_column">This section is dedicated for visually creative artists. Upload any art peices here.</p>
+		<div class="button"> 
+	  <form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		  <input type="submit" value="UPLOAD">
+			   </form>
+	  </div>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="thumbnail"> <a href="#"><img src="code.jpg" alt="" width="2000" class="cards"/></a>
+      <h4>Software Development</h4>
+      <p class="text_column">This section is dedicated for programming projects of all languages. When uploading your project, please make sure you upload a compressed zip file that contains all files needed to compile your code.</p>
+		<div class="button"> 
+	  <form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		  <input type="submit" value="UPLOAD">
+			   </form>
+	  </div>
     </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-  <div class="gallery">
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="thumbnail"> <a href="#"><img src="images/bkg_06.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
-      <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="thumbnail"> <a href="#"><img src="alternative.jpg" alt="" width="2000" class="cards"/></a>
+      <h4>Alternatives</h4>
+      <p class="text_column">Is there anything else that you would like to share? Feel free to upload your creativity here if you are unsure which section your peice belongs.</p>
+		<div class="button"> 
+	  <form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		  <input type="submit" value="UPLOAD">
+			   </form>
+	  </div>
     </div>
   </div>
+  
   <!-- Footer Section -->
   <footer id="contact">
     <p class="hero_header"><strong>UPLOAD TO PORTFOLIO</strong></p>

@@ -67,7 +67,7 @@ header {
 	margin-top: 35px;
 	background-color: #F8F8F8;
 	padding-bottom: 20px;
-	margin-left: 1%;
+	margin-left: 8%;
 	margin-right: 1%;
 	border-radius: 3px;
 	padding-top: 20px;
@@ -108,7 +108,7 @@ header {
 .cards {
 	width: 100%;
 	height: auto;
-	max-width: 400px;
+	max-width: 700px;
 	max-height: 200px;
 	opacity: 0.8;
 }
