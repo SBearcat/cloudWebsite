@@ -1,48 +1,52 @@
 <?php
+session_start();
 
-function uploadfiles(parameter)
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+$ownerid = $user_data['user_id'];
+
+$statusMsg = '';
+
+$fileName = basename($_FILES["fileToUpload"]["name"]);
+$fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+$file = $_FILES['fileToUpload']['tmp_name'];
+
+if(!empty($_FILES["fileToUpload"]["name"]))
 {
-	$statusMsg = '';
-
-	$targetDir = "uploads/";
-	$fileName = basename($FILES["file"]["name"]);
-	$targetFilePath = $targetDir . $fileName;
-	$fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-
-	if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"]))
+	$allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf', 'txt', 'css', 'py', 'java', 'html');
+	if(in_array($fileType, $allowTypes))
 	{
-		$allowTypes = array('jpg', 'png', 'jpeg', 'gif', 'pdf', 'txt', 'css', 'py', 'java', 'html');
-		if(in_array($fileType, $allowTypes))
-		{
-		
-			if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath))
+
+		$query = ("INSERT into filestorage (users, filestore, namefile, upload_date) VALUES ('$ownerid','$file','$fileName', NOW())");
+		$insert = mysqli_query($con, $query);
+			if($insert)
 			{
-				$insert = $query("INSERT into userslogged (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
-				if($insert)
-				{
-					$statusMsg = "The file ".$fileName. " has been uploaded successfully.";
-				}
-				else
-				{
-					$statusMsg = "File upload failed, please try again";
-				}
+				$statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+				sleep(2);
+				header("Location: index.php");
+				die;
 			}
 			else
 			{
-				$statusMsg = "Sorry, there was an error uploading your file.";
+				$statusMsg = "File upload failed, please try again";
+				header("Location: index.php");
 			}
-		}
-		else
-		{
-			$statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, PDF, TXT, CSS, PY, JAVA, & HTML files are allowed';
-		}
+
 	}
 	else
 	{
-		$statusMsg = "Please select a file to upload";
+		$statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, PDF, TXT, CSS, PY, JAVA, & HTML files are allowed';
+		header("Location: index.php");
 	}
+}
+else
+{
+	$statusMsg = "Please select a file to upload";
+	header("Location: index.php");
+}
 
-	echo $statusMsg;
-} 
-
+echo $statusMsg;
 ?>
