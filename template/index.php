@@ -37,7 +37,7 @@ session_start();
   <!-- Stats Gallery Section -->
   <div class="gallery">
     <div class="thumbnail"> <a href="#"><img src="art.jpg" alt="" width="2000" class="cards"/></a>
-      <h4>Art Peices</h4>
+      <a href="displayart.php"><h4>Art Pieces</h4></a>
       <p class="text_column">This section is dedicated for visually creative artists. Upload any art peices here.</p>
 		<div class="button"> 
 	  <form action="upload.php" method="post" enctype="multipart/form-data">
