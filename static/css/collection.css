@@ -1,0 +1,20 @@
+body {
+  background-color: #6c757d;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+  grid-gap: 20px; /* gap between images */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
