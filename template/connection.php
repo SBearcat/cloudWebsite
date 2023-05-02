@@ -2,9 +2,9 @@
 
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "jan2023";
+$dbpass = "";
 $dbname = "websitepdb";
-$dbport = "3307";
+$dbport = "3306";
 
 if(!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport))
 {
