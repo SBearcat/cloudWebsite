@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
   {
     //save to database
     $user_id = random_num(20);
-    $query = "insert into userslogged (user_name, password, email, user_id) values ('$user_name', '$password', '$email','$user_id')";
+    $query = "insert into userslogged (user_name, password, email, signupdate, user_id) values ('$user_name', '$password', '$email', NOW(),'$user_id')";
 
     mysqli_query($con, $query);
 
